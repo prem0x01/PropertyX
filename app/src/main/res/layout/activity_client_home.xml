@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Land Finder!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Properties"
+        android:onClick="viewProperties"/>
+
+    <!-- RecyclerView for Property Listings -->
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="167dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="Profile"
+        android:textColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_add_property"
+        android:paddingBottom="70dp"/>
+
+    <!-- Add Property Button -->
+    <Button
+        android:id="@+id/btn_add_property"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Property"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"/>
+
+
+</LinearLayout>

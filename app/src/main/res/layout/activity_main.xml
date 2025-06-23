@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- App Logo -->
+
+    <!-- Credits Below Logo -->
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="136dp"
+        android:layout_height="137dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="192dp"
+        android:contentDescription="App Logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/property_masters" />
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_logo"
+        android:layout_centerHorizontal="true"
+        android:text="App built by Rushikesh, Kedar, Prem"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Login & Register Buttons -->
+
+    <!-- RecyclerView for Property Listings -->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credits"
+        android:layout_marginTop="29dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:padding="10dp"
+            android:text="Register"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:padding="10dp"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_layout"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
